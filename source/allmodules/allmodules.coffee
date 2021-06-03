@@ -1,9 +1,11 @@
 import configmodule from "./configmodule"
 import debugmodule from "./debugmodule"
+import editormodule from "./editormodule"
 
 Modules = {
     configmodule,
-    debugmodule
+    debugmodule,
+    editormodule,
 }
 
 export default Modules
