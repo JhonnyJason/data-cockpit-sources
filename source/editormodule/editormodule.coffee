@@ -11,6 +11,17 @@ print = (arg) -> console.log(arg)
 
 CodeJar = require("codejar").CodeJar
 Prism = require("prismjs")
+## mass require attempt
+require("prismjs/components/prism-coffeescript")
+require("prismjs/components/prism-bash")
+require("prismjs/components/prism-json")
+require("prismjs/components/prism-livescript")
+require("prismjs/components/prism-markdown")
+require("prismjs/components/prism-nginx")
+require("prismjs/components/prism-perl")
+require("prismjs/components/prism-pug")
+require("prismjs/components/prism-stylus")
+
 # loadLanguages = require("prismjs/components/")
 # loadLanguages(["coffee", "bash", "json", "livescript", "markdown", "nginx", "perl", "pug", "stylus"])
 
@@ -28,7 +39,8 @@ editormodule.initialize = ->
 highlight = (editField) ->
     log "highlight"
     code = editField.textContent
-    html = Prism.highlight(code, Prism.languages.javascript, 'javascript');
+    # html = Prism.highlight(code, Prism.languages.javascript, 'javascript');
+    html = Prism.highlight(code, Prism.languages.coffeescript, 'coffeescript');
     log html
     editField.innerHTML = html
     return
