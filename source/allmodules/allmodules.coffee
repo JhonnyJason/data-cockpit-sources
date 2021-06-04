@@ -1,3 +1,4 @@
+import accountsettingsmodule from "./accountsettingsmodule"
 import appcoremodule from "./appcoremodule"
 import configmodule from "./configmodule"
 import debugmodule from "./debugmodule"
@@ -13,6 +14,7 @@ import statemodule from "./statemodule"
 import utilmodule from "./utilmodule"
 
 Modules = {
+    accountsettingsmodule,
     appcoremodule,
     configmodule,
     debugmodule,
