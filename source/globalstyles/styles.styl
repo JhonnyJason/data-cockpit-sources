@@ -1,35 +1,101 @@
-// globalstyles styles
+/*==========================================================
+Font
+==========================================================*/
+@font-face
+    font-family: "SourceSans Pro"
+    src: url("/font/SourceSansPro-Regular.ttf")
 
 /*==========================================================
-Color Theme
+Colors
 ==========================================================*/
-cd-foreground = white
-cd-flash = purple
+// cd-dark = black
+// cd-bright = #8FFCFF
+// cd-flash = #FF8C00
 cd-background = black
+cd-foreground = #ca70ab
+cd-flash = #8FFCFF
+element-background = rgba(66,96,96,0.7)
 
 /*==========================================================
-Global Variables
+variables
 ==========================================================*/
-// max-content-width = 900px
-// mobile-side-padding = 15px
+max-content-width = 900px
+mobile-side-padding = 15px
 
+bar-icon-size = 37px
+bar-icon-padding = 7px
+bar-height =  2px + bar-icon-size + 2 * bar-icon-padding
 
 /*==========================================================
 General Tag Styles
 ==========================================================*/
 body
-    background-color cd-background
     color cd-foreground
-    font-family: Arial, Helvetica, sans-serif
+    background-color: cd-background
     text-align: center
+    font-family: "SourceSans Pro", sans-serif
     font-size: 12pt
     height 100vh
     width 100%
     overflow hidden
 
 h1
-    font-size: 17pt
+    font-size: 24pt
+    padding-top: 20pt
+    padding-bottom: 7pt
+    padding-left: 20pt
+    padding-right: 20pt
+    user-select none
 h2
-    font-size: 15pt
+    font-size: 18pt
+    padding-top: 15pt
+    padding-bottom: 7pt
+    padding-left: 20pt
+    padding-right: 20pt
+    user-select none
+
 p
+    font-size: 14pt
+    padding-top: 10pt
+    padding-bottom: 7pt
+    padding-left: 20pt
+    padding-right: 20pt
+    user-select none
+
+
+input
+    text-overflow: ellipsis;
+    padding: 7px
+    box-sizing: border-box
     font-size: 12pt
+    color cd-foreground
+    background-color cd-background
+    border none
+    width 100%
+    text-align: center
+    margin-top 7px
+
+input:focus
+    padding: 7px
+    background-color cd-background
+
+svg
+    pointer-events: none
+ 
+
+/*==========================================================
+General Tag Styles
+==========================================================*/
+.content
+    margin auto
+    width 100%
+    padding-left: mobile-side-padding
+    padding-right: mobile-side-padding
+    box-sizing: border-box
+
+paddingless-content-width = (max-content-width + (2 * mobile-side-padding))
+@media screen and (min-width: paddingless-content-width)
+    .content
+        width max-content-width
+        padding-left: 0
+        padding-right: 0

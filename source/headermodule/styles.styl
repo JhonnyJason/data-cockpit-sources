@@ -1,0 +1,32 @@
+// header styles
+bar-icon-size ?= 33px
+bar-icon-padding ?= 7px
+bar-height ?= bar-icon-size + 2 * bar-icon-padding
+
+// header-logo-size = 45px
+// #header-logo
+//     width header-logo-size
+//     height header-logo-size
+
+#header
+    background-color element-background 
+    padding bar-icon-padding (2 * bar-icon-padding)
+    position fixed
+    top 0
+    left 0
+    width 100%
+    box-sizing: border-box
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    align-items: center
+
+    .click-button
+        border-radius: 20%
+
+#header-right
+    margin-left: auto
+
+#settings-button
+    width bar-icon-size
+    height bar-icon-size

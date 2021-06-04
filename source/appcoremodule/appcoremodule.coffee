@@ -9,9 +9,20 @@ olog = (obj) -> log "\n" + ostr(obj)
 print = (arg) -> console.log(arg)
 #endregion
 
+
 ############################################################
-appcoremodule.initialize = () ->
+state = null
+
+############################################################
+appcoremodule.initialize = ->
     log "appcoremodule.initialize"
+    state = allModules.statemodule
     return
-    
+
+############################################################
+appcoremodule.startUp = ->
+    log "appcoremodule.startUp"
+    # allModules.aliaspagemodule.slideIn()
+    return
+
 module.exports = appcoremodule
