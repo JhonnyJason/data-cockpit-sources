@@ -10,9 +10,31 @@ print = (arg) -> console.log(arg)
 #endregion
 
 ########################################################
+state = null
+
+########################################################
 configmodule.initialize = ->
     log "configmodule.initialize"
+    state = allModules.statemodule
+
+    global.interfaceServers = configmodule.interfaceServers
+    state.addOnChangeListener("dataManagerURL", syncDataManagerURLFromState)
     return    
+
+############################################################
+syncDataManagerURLFromState = ->
+    log "syncDataManagerURLFromState"
+    dataManagerURL = state.load("dataManagerURL")
+    interfaceServers.authenticationinterface = dataManagerURL
+    return    
+
+########################################################
+#region interfaceConfiguration
+interfaceServers = {
+    authenticationinterface: "https://data.extensivlyon.coffee"
+}
+
+#endregion
 
 ########################################################
 #region exposedProperties

@@ -19,3 +19,9 @@
 [submodule "source/accountsettingsmodule"]
 	path = source/accountsettingsmodule
 	url = git@github.com:JhonnyJason/pwa-sources-accountsettingsmodule.git
+[submodule "source/networkmodule"]
+	path = source/networkmodule
+	url = git@github.com:JhonnyJason/pwa-sources-restnetworkmodule.git
+[submodule "source/specificinterface/authenticationinterface"]
+	path = source/specificinterface/authenticationinterface
+	url = git@github.com:JhonnyJason/authenticationinterface.git
